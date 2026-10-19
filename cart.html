@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Корзина — Бурбалка</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Бурбалка — на главную"><img src="img/logo.webp" alt="" width="44" height="44">бурбалка</a>
+    <nav class="nav" aria-label="Основная навигация"><a href="index.html#hits">Меню</a><a href="index.html#builder">Собрать</a><a href="index.html#week">Новинка</a><a href="index.html#places">Где мы</a></nav>
+    <div class="header__actions">
+      <span class="badge js-open">Открыто до 22:00</span>
+      <a class="round" href="cart.html" aria-label="Корзина"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7L5.5 8.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="count js-count" data-zero></span></a>
+      <button class="round round--ink burger js-burger" type="button" aria-label="Открыть меню" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="mnav__top"><a class="logo" href="index.html"><img src="img/logo.webp" alt="" width="44" height="44">бурбалка</a><button class="round round--ink js-close" type="button" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+  <nav class="mnav__links" aria-label="Мобильная навигация"><a href="index.html#builder">Собрать</a><a href="index.html#hits">Меню</a><a href="index.html#week">Новинка</a><a href="index.html#places">Где мы</a></nav>
+  <img class="mnav__burba" src="img/pose-hello.webp" alt="Бурба машет">
+</div>
+
+<main>
+  <div class="container page-head"><a class="back" href="index.html#hits">← К меню</a><h1 class="display">Твой заказ</h1></div>
+
+  <div class="container section" id="cart-empty" hidden style="padding-top:8px">
+    <div class="empty"><img src="img/pose-sad.webp" alt="Бурба грустит"><h2 class="h2">Тут пусто. Бурбе одиноко</h2><p class="muted">Собери напиток в конструкторе или возьми хит — и Бурба запрыгнет в стакан.</p><a class="btn btn--ink" href="index.html#builder">Собрать напиток</a></div>
+  </div>
+
+  <form class="container checkout" id="cart" novalidate>
+    <div class="checkout__form" id="cart-full">
+      <div class="lines" id="lines"></div>
+      <a class="back" href="index.html#hits">+ Добавить ещё напиток</a>
+      <div class="block"><h2 class="h3">Где заберёшь</h2><div class="chips js-radio" role="radiogroup" aria-label="Точка выдачи"><button type="button" class="chip" role="radio" data-place="center" aria-checked="true">Центр · Советская, 18</button><button type="button" class="chip" role="radio" data-place="trinity" aria-checked="false">Тринити · 2 этаж</button></div></div>
+      <div class="block"><h2 class="h3">Когда</h2><div class="chips js-radio" id="slots" role="radiogroup" aria-label="Время выдачи"></div></div>
+      <div class="fields">
+        <label class="field">Имя для стаканчика<input name="name" type="text" placeholder="Например, Даша" autocomplete="given-name" maxlength="20"><span class="field__error">Напиши имя — Бурба подпишет стакан</span></label>
+        <label class="field">Телефон<input name="phone" type="tel" placeholder="+375 29 123-45-67" autocomplete="tel" inputmode="tel"><span class="field__error">Нужен номер в формате +375 29 123-45-67</span></label>
+      </div>
+    </div>
+    <aside class="summary-card" aria-label="Итог заказа">
+      <img src="img/pose-jump.webp" alt="" width="160" height="188">
+      <div class="kv"><span>Напитки</span><b class="js-total">0,00 BYN</b></div>
+      <div class="kv"><span>Пузырьки в карте</span><b id="k-stamps"></b></div>
+      <div class="divider"></div>
+      <div class="kv kv--total"><span>К оплате</span><b class="js-total">0,00 BYN</b></div>
+      <button class="btn btn--ink btn--block" type="submit" id="pay">Оплатить</button>
+      <p class="concept">Это концепт для портфолио: заказ никуда не уходит, оплата не проводится.</p>
+    </aside>
+  </form>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div><a class="logo" href="index.html"><img src="img/logo.webp" alt="" width="44" height="44">бурбалка</a><p>Бабл-ти с характером. Гродно, с 2026 года.<br>Концепт сайта для портфолио: бар вымышленный, маскот и иллюстрации нарисованы для проекта.<br>Дизайн и вёрстка — Дарья Поливкина</p></div>
+    <div class="footer__cols"><div><h4>Точки</h4><ul><li>Советская, 18</li><li>ТРЦ «Тринити», 2 этаж</li></ul></div><div><h4>Часы</h4><ul><li>каждый день</li><li>10:00–22:00</li></ul></div><div><h4>Мы тут</h4><ul><li>Telegram @burbalka</li><li>Instagram @burbalka.grodno</li></ul></div></div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

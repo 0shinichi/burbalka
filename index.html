@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бурбалка — бабл-ти бар в Гродно</title>
+<meta name="description" content="Бурбалка — бабл-ти бар в Гродно: конструктор напитка, хиты, карта «7 пузырьков» и маскот Бурба. Концепт сайта для портфолио.">
+<meta property="og:title" content="Бурбалка — пузырьки, которые поднимают настроение">
+<meta property="og:image" content="img/hero.webp">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Бурбалка — на главную"><img src="img/logo.webp" alt="" width="44" height="44">бурбалка</a>
+    <nav class="nav" aria-label="Основная навигация"><a href="#hits">Меню</a><a href="#builder">Собрать</a><a href="#week">Новинка</a><a href="#places">Где мы</a></nav>
+    <div class="header__actions">
+      <span class="badge js-open">Открыто до 22:00</span>
+      <a class="round" href="cart.html" aria-label="Корзина"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 8.5h13l-1.2 11.5H6.7L5.5 8.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="count js-count" data-zero></span></a>
+      <a class="btn btn--ink btn--m" href="#builder">Собрать напиток</a>
+      <button class="round round--ink burger js-burger" type="button" aria-label="Открыть меню" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="mnav__top"><a class="logo" href="index.html"><img src="img/logo.webp" alt="" width="44" height="44">бурбалка</a><button class="round round--ink js-close" type="button" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+  <nav class="mnav__links" aria-label="Мобильная навигация"><a href="#builder">Собрать</a><a href="#hits">Меню</a><a href="#week">Новинка</a><a href="#places">Где мы</a><a href="cart.html">Корзина</a></nav>
+  <img class="mnav__burba" src="img/pose-hello.webp" alt="Бурба машет">
+</div>
+
+<main>
+  <section class="container section" style="padding-top:16px">
+    <div class="hero">
+      <div class="bubbles" aria-hidden="true"></div>
+      <div class="hero__text">
+        <span class="badge badge--white js-open-full">Открыто до 22:00 · 2 точки в Гродно</span>
+        <h1 class="display">Пузырьки, которые <em>поднимают</em> настроение</h1>
+        <p class="lead">Собери свой бабл-ти из 40 000 сочетаний — или возьми хит недели. Заберёшь за 5 минут, а Бурба подпишет стакан.</p>
+        <div class="row"><a class="btn btn--ink" href="#builder">Собрать напиток</a><a class="btn btn--white" href="#hits">Хиты меню</a></div>
+        <div class="stats"><div><b>40 000</b><span>сочетаний<br>в конструкторе</span></div><div><b>5 мин</b><span>от заказа<br>до стакана</span></div><div><b>4 часа</b><span>живёт свежая<br>тапиока</span></div></div>
+      </div>
+      <div class="hero__media"><img class="burba" id="hero-burba" src="img/hero.webp" alt="Бурба — шарик тапиоки — машет рукой" width="480" height="448" title="Нажми на Бурбу"></div>
+    </div>
+  </section>
+
+  <section class="container section" id="builder">
+    <div class="sec-head"><div><span class="eyebrow">Конструктор</span><h2 class="h2">Собери свой бабл-ти</h2></div></div>
+    <div class="builder reveal">
+      <div class="steps">
+        <div class="step"><div class="step__head"><i>1</i>Основа</div><div class="chips" id="b-base" role="radiogroup" aria-label="Основа"></div></div>
+        <div class="step"><div class="step__head"><i>2</i>Вкус</div><div class="chips" id="b-flavor" role="radiogroup" aria-label="Вкус"></div></div>
+        <div class="step"><div class="step__head"><i>3</i>Топпинги <small>до трёх</small></div><div class="chips" id="b-top" aria-label="Топпинги"></div></div>
+        <div class="step"><div class="step__head"><i>4</i>Сладость, лёд и объём</div>
+          <div class="chips" id="b-sweet" role="radiogroup" aria-label="Сладость"></div>
+          <div class="chips" id="b-ice" role="radiogroup" aria-label="Лёд"></div>
+          <div class="chips" id="b-size" role="radiogroup" aria-label="Объём"></div></div>
+        <div class="summary"><div><b id="b-title"></b><span class="small muted" id="b-opts"></span></div><button class="btn btn--ink" type="button" id="b-add">В корзину</button></div>
+      </div>
+      <div class="preview" aria-live="polite">
+        <div id="b-cup"></div>
+        <img class="magic" src="img/pose-magic.webp" alt="" width="130" height="146">
+        <span class="note">Бурба колдует твой напиток</span>
+        <span class="small muted">стакан наполняется вживую при каждом выборе</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section" id="hits">
+    <div class="sec-head"><div><span class="eyebrow">Меню</span><h2 class="h2">Хиты Бурбалки</h2></div>
+      <div class="chips" id="hit-filters" aria-label="Фильтр"><button class="chip chip--fill" type="button" data-f="all" aria-pressed="true">Все</button><button class="chip chip--fill" type="button" data-f="milk" aria-pressed="false">Молочные</button><button class="chip chip--fill" type="button" data-f="fruit" aria-pressed="false">Фруктовые</button><button class="chip chip--fill" type="button" data-f="new" aria-pressed="false">Новинки</button></div></div>
+    <div class="grid" id="hits-list"></div>
+  </section>
+
+  <section class="container section" id="week">
+    <div class="banner reveal">
+      <img src="img/pose-wow.webp" alt="Бурба удивлён новинкой" width="240" height="227" loading="lazy">
+      <div class="banner__text" style="display:grid;gap:16px;justify-items:start">
+        <span class="eyebrow">Напиток недели · до 26 октября</span>
+        <h2 class="display">Брусника-лайм</h2>
+        <p class="lead">Кисло-сладкая брусника из беларуских лесов, лайм и лопающаяся попинг-боба. Бурба уже попробовал — визжит от восторга.</p>
+        <div class="row"><span class="h2">9,50 BYN</span><button class="btn btn--pink" type="button" data-hit="lingonberry">Попробовать</button></div>
+      </div>
+      <img src="img/cup-lingonberry.webp" alt="Стакан брусники-лайм" width="300" height="445" loading="lazy" style="max-height:320px;object-fit:contain">
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="split">
+      <div class="panel panel--peach reveal">
+        <span class="eyebrow">Карта лояльности</span><h2 class="h2">Седьмой — в подарок</h2>
+        <p class="muted">Каждый стакан — пузырёк в карте. Собери семь, и Бурба угостит. Карта живёт в Telegram, ничего скачивать не нужно.</p>
+        <div class="stamps-card"><div><b style="font-weight:500">Карта «7 пузырьков»</b> <span class="small muted" id="stamps-count">4 из 7</span></div><div class="stamps" id="stamps"></div></div>
+      </div>
+      <div class="panel panel--plum reveal">
+        <span class="eyebrow">Из чего тапиока</span><h2 class="h2">Варим каждые 4 часа</h2>
+        <ul class="facts"><li>Крахмал маниоки, тростниковый сахар и вода — без красителей</li><li>Свежая партия каждые 4 часа: не успела — выбрасываем</li><li>Попинг-боба с настоящим соком, желе на агар-агаре</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section" id="places">
+    <div class="sec-head"><div><span class="eyebrow">Где мы</span><h2 class="h2">Две точки в Гродно</h2></div></div>
+    <div class="places">
+      <div class="places__cards">
+        <div class="place reveal"><h3 class="h3">Бурбалка · Центр</h3><p>ул. Советская, 18 — у фонтана</p><p class="small muted">каждый день 10:00–22:00</p><a class="btn btn--white btn--m" href="https://yandex.by/maps/?text=%D0%93%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%2C%20%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B0%D1%8F%2018" target="_blank" rel="noopener">Маршрут</a></div>
+        <div class="place reveal"><h3 class="h3">Бурбалка · Тринити</h3><p>ТРЦ «Тринити», 2 этаж, фуд-корт</p><p class="small muted">каждый день 10:00–22:00</p><a class="btn btn--white btn--m" href="https://yandex.by/maps/?text=%D0%93%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%2C%20%D0%A2%D1%80%D0%B8%D0%BD%D0%B8%D1%82%D0%B8" target="_blank" rel="noopener">Маршрут</a></div>
+      </div>
+      <div class="map reveal" role="img" aria-label="Схема: две точки Бурбалки в Гродно">
+        <svg viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect x="-40" y="120" width="960" height="26" fill="#fff" transform="rotate(-6 400 133)"/><rect x="-40" y="300" width="960" height="18" fill="#fff" transform="rotate(3 400 309)"/>
+          <rect x="260" y="-40" width="22" height="560" fill="#fff" transform="rotate(10 271 240)"/><rect x="560" y="-40" width="30" height="560" fill="#fff" transform="rotate(-8 575 240)"/>
+          <rect x="-40" y="380" width="960" height="90" fill="#F2EAF2" transform="rotate(-3 400 425)"/>
+        </svg>
+        <span class="pin" style="left:22%;top:16%"><img src="img/logo.webp" alt="">Центр</span>
+        <span class="pin" style="left:62%;top:52%;animation-delay:-1.5s"><img src="img/logo.webp" alt="">Тринити</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="stickers reveal">
+      <div style="display:grid;gap:14px;justify-items:inherit"><span class="eyebrow">Стикерпак</span><h2 class="h2">Бурба в твоём Telegram</h2><a class="btn btn--ink btn--m" href="https://t.me/" target="_blank" rel="noopener">Добавить стикеры</a></div>
+      <div class="stickers__row"><img src="img/pose-hello.webp" alt="Привет" loading="lazy"><img src="img/pose-wow.webp" alt="Ого" loading="lazy"><img src="img/pose-sleep.webp" alt="Спит" loading="lazy"><img src="img/pose-jump.webp" alt="Прыгает" loading="lazy"><img src="img/pose-magic.webp" alt="Колдует" loading="lazy"><img src="img/pose-sad.webp" alt="Грустит" loading="lazy"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div><a class="logo" href="index.html"><img src="img/logo.webp" alt="" width="44" height="44">бурбалка</a><p>Бабл-ти с характером. Гродно, с 2026 года.<br>Концепт сайта для портфолио: бар вымышленный, маскот и иллюстрации нарисованы для проекта.<br>Дизайн и вёрстка — Дарья Поливкина</p></div>
+    <div class="footer__cols"><div><h4>Точки</h4><ul><li>Советская, 18</li><li>ТРЦ «Тринити», 2 этаж</li></ul></div><div><h4>Часы</h4><ul><li>каждый день</li><li>10:00–22:00</li></ul></div><div><h4>Мы тут</h4><ul><li>Telegram @burbalka</li><li>Instagram @burbalka.grodno</li></ul></div></div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
